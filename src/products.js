@@ -23,7 +23,6 @@ const Products = () => {
         const quantity = await productContract.numberOfUnits();
         console.log(productsList[i], name.toString(), symbol.toString(), quantity.toString())
     }
-    console.log()
     return <div className="main"></div>
 }
 

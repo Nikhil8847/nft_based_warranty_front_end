@@ -36,6 +36,7 @@ const Homepage = () => {
             alert(err)
         }
         setCurrentTokenURI(tokenURI)
+        return tokenURI
     }
     const onSubmit = async () => {
         if (items.name && items.symbol && items.warranty && items.quantity) {
