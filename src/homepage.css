@@ -32,6 +32,8 @@ input
     backdrop-filter: blur(5px);
     /* color:rgb(145, 26, 26); */
     transition: all 1.2s;
+    display:flex;
+    align-self: center;
 }
 input:hover
 {
