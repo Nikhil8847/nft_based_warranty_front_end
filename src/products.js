@@ -129,7 +129,7 @@ const bothfunction=async()=>
                             Funky JACKET
                         </h2>
                         <h2>
-                            price : 0.02
+                            0.002
                         </h2>
                     </div>
                     <div>
@@ -156,9 +156,9 @@ const bothfunction=async()=>
                 </div>
                 <div className="card">
                     <div>
-                        <h2>Mohit</h2>
+                        <h2>Gloves</h2>
                         <h2>
-                                0.04
+                                0.004
                         </h2>
                     </div>
                     <div>
