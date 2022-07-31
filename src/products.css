@@ -84,3 +84,10 @@ h2
     background: #fff;
     color: #143542;
 }
+
+
+.email-sent
+{
+    display:flex;
+    align-self: center;
+}

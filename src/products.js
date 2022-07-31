@@ -1,5 +1,6 @@
 import "./products.css"
 import React,{useState} from "react"
+import axios from "axios"
 import PorductFactoryInterface from "./constants/ProductFactory.sol/ProductFactory.json"
 import productFactoryAddress from "./constants/productFactoryAddress"
 import productInterface from "./constants/Product.sol/Product.json"
@@ -97,6 +98,21 @@ const Products = () => {
         var mydate=new Date(expiryTime*1000);
         alert("Thank You for puchasing the product " + "Your warranty dealine is :" + mydate.toLocaleString())
     }
+
+// Email
+const [sent, setSent] = useState(false)
+const [text, setText] = useState("")
+const sendEmail = async(e) => {
+    setSent(true)
+    try{
+        await axios.post("http://localhost:3000/send", {text})
+    }catch(error)
+    {
+        console.error(error)
+    }
+}
+
+
     return(  
     <div className="main">
             {/* {/* <div>
@@ -117,7 +133,7 @@ const Products = () => {
                     </div>
                     <div>
                         <h2>
-                        0xee90dc967CBa2eC95c713a8736e8B9a1068847CB
+                        0xD1279736a8A436Aff124B10D3597A4eCF08B9A1d
                         </h2>
                     </div>
                     <div>
@@ -139,8 +155,7 @@ const Products = () => {
                         </h2>
                     </div>
                     <div>
-                        <button className="page-button-card" onClick={buy}>
-                            Buy Now
+                        <button className="page-button-card" onClick={buy}>                            Buy Now
                         </button>
                     </div>
                 </div>
@@ -153,7 +168,18 @@ const Products = () => {
 					<button className="page-button" onClick={ () => navigate("/sell")}>
 						Sell
 					</button>
-            </div>   
+            </div>    
+            <div>
+            {!sent ? (
+                <form onSubmit={sendEmail}>
+                        <label>Email Address</label>
+                        <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
+                        <button type="submit">Submit</button>
+                </form>
+            ) : (
+                <h1 className="email-message">Email sent</h1>
+            )}
+            </div>
     </div>
     
     )
