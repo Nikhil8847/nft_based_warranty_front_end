@@ -3,4 +3,6 @@ const getNumberOfProducts = async (productFactoryContract) => {
     return parseInt(numberOfProducts.toString())
 }
 
-export default getNumberOfProducts
+module.exports = {
+    getNumberOfProducts
+}

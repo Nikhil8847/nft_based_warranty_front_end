@@ -85,6 +85,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import Homepage from './homepage'
+import Sell from './sell'
+import Products from './products'
+
+
 
 function App() {
 
@@ -93,6 +97,12 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Homepage/>}/>
+        </Routes>
+        <Routes>
+          <Route exact path="/sell" element={<Sell/>}/>
+        </Routes>
+        <Routes>
+          <Route exact path="/products" element={<Products/>}/>
         </Routes>
       </Router>
     </div>

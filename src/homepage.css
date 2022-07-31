@@ -1,72 +1,23 @@
-
-/* Main */
-.App
+.walletcard
 {
-    height:100vh;
-    width:100vw;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
- 
-
-/* end of main */   background-image: url('./images/1.jpeg');
-background-repeat: no-repeat;
-    background-size: cover;
-
-}
-/* Form style */
-
-input
-{
-    
-    
-    border-radius: 8px;
-    border: 2px solid #dddfe2;
-    outline: none;
-    color: #123d;
-    margin: 0.5rem 0;
-    padding: 0.5rem 0.75rem;
-    width: 29vw;
-    background: rgba(255, 255, 255, 0.297);
-    color:  rgba(237, 43, 43, 0.993);
+    margin: 1rem;
+	border: 1px solid black;
+	border-radius: 5px;
+    padding:10px;
+    background-color: peachpuff;
+    background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px);
-    /* color:rgb(145, 26, 26); */
-    transition: all 1.2s;
+    height:25vh;
+    width:95vw;
     display:flex;
-    align-self: center;
-}
-input:hover
-{
-    background: #fff;
-    color:#2a43ff8b;
-
-
-   font-size: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
-.form-main
-{
-  width:35vw;
-  background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(5px);
-    border-radius:7%;
-  height:50vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-self: center;
-}
 
-.items
-{
-    display:flex;
-    align-self: center;
-}
 
-/* end of fomr style */
-
-/* Button style */
-.button-submit {
+.connection-button {
     background: #143542;
     border: 1px solid #071317;
     color: #fff;
@@ -77,14 +28,9 @@ input:hover
     outline: none;
     cursor: pointer;
     transition:all 1.2s;
-    width: 30vw;
-    align-self: center;
 }
-.button-submit:hover
+.connection-button:hover
 {
-    width:32vw;
     background: #fff;
     color: #143542;
 }
-
-/* End of button style */
