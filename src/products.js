@@ -77,16 +77,17 @@ const Products = () => {
     // }
 
     const buy = async () => {
-        const productAddress = '0xee90dc967CBa2eC95c713a8736e8B9a1068847CB';
+        const productAddress = '0xD1279736a8A436Aff124B10D3597A4eCF08B9A1d';
         const productContract = new ethers.Contract(productAddress, productInterface.abi, signer);
         let transactionResponse;
         try{
             transactionResponse = await productContract.mint();
         } catch(err){
-
+            console.log(err)
         }
             
         const transactionReceipt = await transactionResponse.wait(1);
+        // console.log(transactionReceipt)
         const from = transactionReceipt.events[0].args.from;
         const to = transactionReceipt.events[0].args.to
         const tokenId = transactionReceipt.events[0].args.tokenId
@@ -100,7 +101,7 @@ const Products = () => {
     <div className="main">
             {/* {/* <div>
                 {handler} */}
-                {/* <button onClick={handler}>click here to show all products</button>     */}
+                <button onClick={handler}>click here to show all products</button>    
             {/* </div> */} 
             {/* <div><button onClick={''}>delete</button></div> */}
             <div className="main-card">
