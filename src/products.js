@@ -140,6 +140,7 @@ const sendEmail = async(e) => {
                         <button className="page-button-card" onClick={buy}>
                             Buy Now
                         </button>
+                        
                     </div>
                 </div>
                 <div className="card">
@@ -181,7 +182,6 @@ const sendEmail = async(e) => {
             )}
             </div>
     </div>
-    
     )
 }
 
