@@ -1,3 +1,3 @@
-const productFactoryAddress = "0x426D216e02de2c7534c37c89688Eb18D7e017B48";
+const productFactoryAddress = "0x7a24e3747FeC112CFd04DacB59182EECCC85394B";
 
 export default productFactoryAddress;

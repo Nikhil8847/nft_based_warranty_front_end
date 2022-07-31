@@ -43,7 +43,8 @@ const Sell = () => {
         return tokenURI
     }
     const onSubmit = async () => {
-        if (items.name && items.symbol && items.warranty>0 && items.quantity>0) {
+        console.log(items)
+        if (items.name && items.description && items.warranty>0 && items.quantity>0) {
             const tokenURI = await pinning()
             console.log("Response", tokenURI)
             const transactionResponse = await contract.addProduct(
@@ -110,7 +111,6 @@ const Sell = () => {
                     required
                 ></input>
                 <button className="button-submit" onClick={onSubmit}>
-                    {" "}
                     SUBMIT
                 </button>
             </div>

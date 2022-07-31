@@ -99,6 +99,8 @@ const Products = () => {
         alert("Thank You for puchasing the product " + "Your warranty dealine is :" + mydate.toLocaleString())
     }
 
+    
+
 // Email
 const [sent, setSent] = useState(false)
 const [text, setText] = useState("")
@@ -111,6 +113,13 @@ const sendEmail = async(e) => {
         console.error(error)
     }
 }
+
+const bothfunction=async()=>
+{
+    await buy();
+    await sendEmail();
+}
+
 
 
     return(  
@@ -125,10 +134,10 @@ const sendEmail = async(e) => {
                 <div className="card">
                     <div>
                         <h2>
-                            Mohit
+                            Funky JACKET
                         </h2>
                         <h2>
-                            price : 1
+                            price : 0.02
                         </h2>
                     </div>
                     <div>
@@ -137,10 +146,20 @@ const sendEmail = async(e) => {
                         </h2>
                     </div>
                     <div>
-                        <button className="page-button-card" onClick={buy}>
+                        {!sent ? (
+                            <form onSubmit={sendEmail}>
+                                    <label>Email Address</label>
+                                    <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
+                                    {/* <button type="submit">Submit</button> */}
+                            </form>
+                        ) : (
+                            <h1 className="email-message">Email sent</h1>
+                        )}
+                    </div>
+                    <div>
+                        <button className="page-button-card" onClick={bothfunction}>
                             Buy Now
                         </button>
-                        
                     </div>
                 </div>
                 <div className="card">
@@ -170,17 +189,7 @@ const sendEmail = async(e) => {
 						Sell
 					</button>
             </div>    
-            <div>
-            {!sent ? (
-                <form onSubmit={sendEmail}>
-                        <label>Email Address</label>
-                        <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
-                        <button type="submit">Submit</button>
-                </form>
-            ) : (
-                <h1 className="email-message">Email sent</h1>
-            )}
-            </div>
+            
     </div>
     )
 }
