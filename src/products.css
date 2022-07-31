@@ -1,7 +1,80 @@
 .main
 {
     height:100vh;
-    width:100vw;
+    width:100%;
+}
+
+.buttonpanel
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
+.page-button {
+    background: #143542;
+    border: 1px solid #071317;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:all 1.2s;
+    width:50vw;
+    align-self: center;
+}
+.page-button:hover
+{
+    background: #fff;
+    color: #143542;
+}
+
+.main-card
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.card
+{
+    width:40vw;
+    height:20wh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem;
+	border: 1px solid black;
+	border-radius: 5px;
+    padding:10px;
+    background-color: peachpuff;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    flex-basis: 20%;
+    align-items: center;
+}
+
+.page-button-card {
+    background: #143542;
+    border: 1px solid #071317;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:all 1.2s;
+    width:30vw;
+    align-self: center;
+}
+.page-button-card:hover
+{
+    background: #fff;
+    color: #143542;
+}

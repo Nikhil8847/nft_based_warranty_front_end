@@ -67,15 +67,19 @@ const Homepage=()=>
 				</div>
 				{/* {errorMessage} */}
             </div>    
-            <div>
-                
-                <button onClick={ () => navigate("/products")}>
-                    Buy  
-                </button>
-                <button onClick={ () => navigate("/sell")}>
-                    Sell
-                </button>
-            </div>    
+            <div class="below">
+                <div className="image-gif">
+					<iframe src="https://giphy.com/embed/JeEC3mlQLjGk7smSJu" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ProBItExchange-bull-bullish-market-JeEC3mlQLjGk7smSJu">via GIPHY</a></p>
+				</div>
+				<div className="buttonpanel"> 
+					<button className="page-button" onClick={ () => navigate("/products")}>
+						Buy  
+					</button>
+					<button className="page-button" onClick={ () => navigate("/sell")}>
+						Sell
+					</button>
+				</div>
+			</div>    
         </div>
     )
 }

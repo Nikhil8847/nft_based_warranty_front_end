@@ -39,9 +39,7 @@ input:hover
 {
     background: #fff;
     color:#2a43ff8b;
-
-
-   font-size: 1rem;
+    font-size: 1rem;
 }
 
 .form-main
@@ -88,3 +86,36 @@ input:hover
 }
 
 /* End of button style */
+
+.add-text
+{
+    align-self: center;
+}
+
+.buttonpanel
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.page-button {
+    background: #143542;
+    border: 1px solid #071317;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:all 1.2s;
+    width:50vw;
+    align-self: center;
+}
+.page-button:hover
+{
+    background: #fff;
+    color: #143542;
+}
