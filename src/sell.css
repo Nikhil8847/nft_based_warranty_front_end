@@ -7,13 +7,11 @@
     display:flex;
     flex-direction:column;
     justify-content: space-around;
- 
-
-/* end of main */   background-image: url('./images/1.jpeg');
-background-repeat: no-repeat;
+    background-image: url('./images/1.jpeg');
+    background-repeat: no-repeat;
     background-size: cover;
-
 }
+
 /* Form style */
 
 input
@@ -118,4 +116,10 @@ input:hover
 {
     background: #fff;
     color: #143542;
+}
+
+
+.add-text
+{
+    color:#fff;
 }

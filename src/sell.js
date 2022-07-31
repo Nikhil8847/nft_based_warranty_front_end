@@ -14,7 +14,7 @@ const Sell = () => {
 
     const [items, setUser] = useState({
         name: "",
-        symbol: "",
+        description: "",
         warranty: "",
         quantity: "",
     })
@@ -48,7 +48,7 @@ const Sell = () => {
             console.log("Response", tokenURI)
             const transactionResponse = await contract.addProduct(
                 items.name,
-                items.symbol,
+                "default",
                 365 * 24 * 60 * 60 * parseInt(items.warranty, 10),
                 items.quantity,
                 tokenURI
@@ -73,7 +73,7 @@ const Sell = () => {
     return (
         <div className="App">
             <div className="add-text">
-                <h1>Add products for sale</h1>
+                <h1 className="add-text">Add products for sale</h1>
             </div>
             <div className="form-main">
                 <input
@@ -86,8 +86,8 @@ const Sell = () => {
                 ></input>
                 <input
                     type="text"
-                    name="symbol"
-                    value={items.symbol}
+                    name="description"
+                    value={items.description}
                     onChange={handleChange}
                     placeholder="Description of product"
                     required
