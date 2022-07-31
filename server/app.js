@@ -20,10 +20,10 @@ app.use(cors())
 app.post('/send', cors(), async(req, res) =>{
     let {text} = req.body;
     const output = `
-    <h3>Dear user,</h3>
-    <h2>You have successfully purchased your NFT with ID #0xD1279736a8A436Aff124B10D3597A4eCF08B9A1d. Its warranty ends on 31th August, 2024.</h2>
-    <h2>We hope to see you again.</h2>
-    <h6>OurServiceNFT</h6>
+    <p>Dear user,</p>
+    <p>You have successfully purchased your NFT with ID #0xD1279736a8A436Aff124B10D3597A4eCF08B9A1d. Its warranty ends on 31th August, 2023.</p>
+    <p>We hope to see you again.</p>
+    <h3>OurServiceNFT</h3>
     `;
 
     let transporter = nodemailer.createTransport({
