@@ -68,8 +68,11 @@ const Homepage=()=>
 				{/* {errorMessage} */}
             </div>    
             <div class="below">
-                <div className="image-gif">
+                <div className="box clockwiseSpin image-gif">
+					{/* <a href='https://pngtree.com/so/3d'>3d png from pngtree.com/</a> */}
 					<iframe src="https://cryptologotypes.com/img/logos/ethereum/ethereum-eth-logo.svg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://cryptologotypes.com/img/logos/ethereum/ethereum-eth-logo.svg"></a></p>
+					{/* <img href="../images/coin-image.png"></img> */}
+					{/* <img src={Images}></img></div> */}
 				</div>
 				<div className="buttonpanel"> 
 					<button className="page-button" onClick={ () => navigate("/products")}>

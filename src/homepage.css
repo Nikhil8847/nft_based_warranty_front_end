@@ -77,5 +77,31 @@
     justify-content: space-around;
     align-self: center;
 }
+.accountDisplay
+{
+    color:#fff;
+}
+.balanceDisplay
+{
+    color:#fff;
+}
+
+
+
+@keyframes clockwiseSpin {
+    from  {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+    }	
+ }
+ .clockwiseSpin {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: clockwiseSpin;
+    animation-timing-function: linear;
+ }
+ 
 
 

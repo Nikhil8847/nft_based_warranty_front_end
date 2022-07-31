@@ -76,7 +76,6 @@ const Products = () => {
     //     console.log(result);
     //     document.getElementById("khota").innerHTML = result;
     // }
-
     const buy = async () => {
         const productAddress = '0xD1279736a8A436Aff124B10D3597A4eCF08B9A1d';
         const productContract = new ethers.Contract(productAddress, productInterface.abi, signer);
@@ -86,9 +85,7 @@ const Products = () => {
         } catch(err){
             console.log(err)
         }
-            
         const transactionReceipt = await transactionResponse.wait(1);
-        // console.log(transactionReceipt)
         const from = transactionReceipt.events[0].args.from;
         const to = transactionReceipt.events[0].args.to
         const tokenId = transactionReceipt.events[0].args.tokenId
@@ -96,7 +93,7 @@ const Products = () => {
         const expiryTime = transactionReceipt.events[1].args.expiryTime
         console.log(from.toString(), to.toString(), tokenId.toString(), buyTime.toString(), expiryTime.toString());
         var mydate=new Date(expiryTime*1000);
-        alert("Thank You for puchasing the product " + "Your warranty dealine is :" + mydate.toLocaleString())
+        alert("Thank You for puchasing the product " + "Your warranty deadline is :" + mydate.toLocaleString())
     }
 
     
@@ -113,22 +110,17 @@ const sendEmail = async(e) => {
         console.error(error)
     }
 }
-
 const bothfunction=async()=>
 {
     await buy();
     await sendEmail();
 }
-
-
-
     return(  
     <div className="main">
-            {/* {/* <div>
-                {handler} */}
-                <button onClick={handler}>click here to show all products</button>    
-            {/* </div> */} 
-            {/* <div><button onClick={''}>delete</button></div> */}
+                {/* <button onClick={handler}>click here to show all products</button>     */}
+            <div className="heading">
+                <h1>Products Available</h1>
+            </div>
             <div className="main-card">
                 
                 <div className="card">
@@ -153,7 +145,7 @@ const bothfunction=async()=>
                                     {/* <button type="submit">Submit</button> */}
                             </form>
                         ) : (
-                            <h1 className="email-message">Email sent</h1>
+                            <h1 className="email-message">Transaction Successful</h1>
                         )}
                     </div>
                     <div>
@@ -171,15 +163,25 @@ const bothfunction=async()=>
                     </div>
                     <div>
                         <h2>
-                        0xee90dc967CBa2eC95c713a8736e8B9a1068847CB
+                            0xee90dc967CBa2eC95c713a8736e8B9a1068847CB
                         </h2>
+                        <div>
+                        {!sent ? (
+                            <form onSubmit={sendEmail}>
+                                    <label>Email Address</label>
+                                    <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
+                                    {/* <button type="submit">Submit</button> */}
+                            </form>
+                        ) : (
+                            <h1 className="email-message">Transaction Successful</h1>
+                        )}
+                    </div>
                     </div>
                     <div>
                         <button className="page-button-card" onClick={buy}>                            Buy Now
                         </button>
                     </div>
                 </div>
-                
             </div>
             <div className="buttonpanel">
                     <button className="page-button" onClick={ () => navigate("/")}>
